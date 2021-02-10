@@ -1,7 +1,14 @@
+//Reverse array in groups
+//Given an array arr[] of positive integers of size N. Reverse every sub-array of K group elements.
+/*Example input 5 3
+			  1 2 3 4 5
+Output :      3 2 1 5 4
+*/
+
 package ds01.arrays.level1;
 
 public class Arrays_06 {
-	private static int[] reverseInGroup(int a[], int n, int k) {
+	private static int[] reverseArrayInGroup(int[] a, int n, int k) {
 		/*
 		 * run a loop from start till end, take i as first location and we know that we
 		 * have to reverse k elements so take i+k-1 as last element. suppose at last we
@@ -31,14 +38,14 @@ public class Arrays_06 {
 
 	public static void main(String[] args) {
 		int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
-		reverseInGroup(array, array.length, 3);
+		reverseArrayInGroup(array, array.length, 3);
 		printArray(array);
 
 	}
 
 	private static void printArray(int[] arr) {
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i] + " ");
+		for (int value : arr) {
+			System.out.print(value + " ");
 		}
 	}
 }

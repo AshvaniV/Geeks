@@ -8,11 +8,10 @@ package ds01.arrays.level1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 
 public class Arrays_01 {
-	private static void insertAtIndexByUser(int arr[], int sizeOfArray, int index, int element) {
+	private static void insertAtIndexByUser(int[] arr, int sizeOfArray, int index, int element) {
 		System.out.println("Array before inserting element: " + element + " at: " + index);
 		printArray(arr);
 		int lastElement = arr[arr.length - 1];
@@ -29,22 +28,21 @@ public class Arrays_01 {
 	private static void insertAtIndexByJava(List<Integer> arr, int sizeOfArray, int index, int element) {
 		System.out.println("ArrayList before inserting element: " + element + " at: " + index);
 		printArrayList(arr);
-		Integer integerElement = new Integer(element);
+		Integer integerElement = element;
 		arr.add(index, integerElement);
 		System.out.println("\n ArrayList after inserting element");
 		printArrayList(arr);
 	}
 
 	static void printArrayList(List<Integer> a) {
-		Iterator<Integer> itr = a.iterator();
-		while (itr.hasNext()) {
-			System.out.print(itr.next() + " ");
+		for (Integer integer : a) {
+			System.out.print(integer + " ");
 		}
 	}
 
 	private static void printArray(int[] arr) {
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i] + " ");
+		for (int value : arr) {
+			System.out.print(value + " ");
 		}
 	}
 
