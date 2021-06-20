@@ -28,3 +28,9 @@ public class Arrays17 {
         System.out.println(sellStock(arr));
     }
 }
+
+/*Solution:
+At any time profit = sell price - buy price
+we have to maintain minStockPrice which will have minimum price on which we could/can buy a stock then using this value
+calculate maxProfit each day and find max out of it.
+* */

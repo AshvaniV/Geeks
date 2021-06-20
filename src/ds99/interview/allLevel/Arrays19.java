@@ -1,7 +1,6 @@
 /*
 Common elements
 Given three arrays sorted in increasing order. Find the elements that are common in all three arrays.
-Note: can you take care of the duplicates without using any additional Data Structure?
 */
 
 package ds99.interview.allLevel;
@@ -43,6 +42,12 @@ public class Arrays19 {
 }
 
 /*
-Space complexity : O(1)
+Solution :
+sol 1: we can find intersection of A and B and the this result's intersection with C. [this result is applicable
+for non sorted arrays as well]
+sol 2: as we know all arrays are sorted so we can run a loop till any smallest length array and then
+find elements available in all 3 arrays.
+
+Space complexity : O(n1+n2+n3)
 Time complexity :  O(n1+n2+n3)
 */

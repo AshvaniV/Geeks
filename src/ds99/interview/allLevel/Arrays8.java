@@ -35,9 +35,9 @@ public class Arrays8 {
 
 /*logic:
 
-We have 2 variables maxEnd and maxSum. maxSum is sub-array sum at any point of time.
-We will be calculating maxSum until maxEnd is bigger than maxSum. If anytime we get maxEnd negative value, set it back gto 0.
+We have 2 variables maxEnd and maxSum. maxSum is sub-array's sum at any point of time.
+We will be calculating maxSum until maxEnd is bigger than maxSum. If anytime we get maxEnd negative, set it back to 0.
 
-one variable maxEnd is continuously adding elements until their sum is positive.
+first variable maxEnd is continuously adding elements until their sum is positive.
 Second variable maxSum is changing it's value whenever we found maxEnd is greater than it.
  */

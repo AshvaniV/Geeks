@@ -3,14 +3,16 @@
 1) All elements smaller than a come first.
 2) All elements in range a to b come next.
 3) All elements greater than b appear in the end.
-The individual elements of three sets can appear in any order. You are required to return the modified array.*/
+The individual elements of three sets can appear in any order. You are required to return the modified array.
+Expected Time Complexity: O(n)
+Expected Auxiliary Space: O(1)
+*/
 
 package ds99.interview.allLevel;
 
 public class Arrays32 {
 
-    public static void threeWayPartition(int arr[], int a, int b)
-    {
+    public static void threeWayPartition(int[] arr, int a, int b) {
         int l = 0;
         int r = arr.length - 1;
 
@@ -28,7 +30,7 @@ public class Arrays32 {
                 i--;
             }
         }
-printArray(arr);
+        printArray(arr);
     }
 
     private static void printArray(int[] arr) {
@@ -38,48 +40,22 @@ printArray(arr);
         System.out.println("\n");
     }
 
-
-    public static void threeWayPartition1(int[] arr, int lowVal, int highVal) {
-        int n = arr.length;
-        int start = moveSmallerToLeft(arr, lowVal, n, 0);
-        int end = moveLargerToRight(arr, highVal, n, n - 1);
-        moveSmallerToLeft(arr, lowVal + 1, n, start);
-        moveLargerToRight(arr, highVal - 1, n, end);
-        printArray(arr);
-    }
-
-    private static int moveLargerToRight(int[] arr, int highVal, int n, int end) {
-        for (int i = end; i >= 0; i--) {
-            if (arr[i] > highVal) {
-                swap(arr, end, i);
-                end--;
-            }
-        }
-        return end;
-    }
-
-    private static int moveSmallerToLeft(int[] arr, int lowVal, int n, int start) {
-        for (int i = start; i < n; i++) {
-            if (arr[i] < lowVal) {
-                swap(arr, start, i);
-                start++;
-            }
-        }
-        return start;
-    }
-
-    private static void swap(int[] arr, int a, int b) {
-        int temp = arr[a];
-        arr[a] = arr[b];
-        arr[b] = temp;
-    }
-
-
     public static void main(String[] args) {
         int[] arr = {15, 14, 5, 20, 4, 2, 54, 20, 87, 98, 3, 1, 32};
         int a = 14;
         int b = 20;
-        threeWayPartition1(arr, a, b);
+        threeWayPartition(arr, a, b);
     }
 
 }
+
+/*Solution
+We can't use extra space here with O[N] and also cam't traverse it using inner loop so we have to solve it using temp
+variable.
+We have defined 2 variables l and r which will maintain lower to a and higher to b values and will help in swapping
+so whenever we find any value smaller than a we swap ith value with lth value and increase l. As we started l with 0
+index it will always maintain values which are having value lower than a. other side whenever we are having a value
+greater than b then we are swapping it with rth value[which was initially on last element of array].
+now in this case the value came to ith location might again lower or smaller than a and b so we have to consider it again
+and to consider it again we are decreasing i by 1.
+* */

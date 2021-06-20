@@ -1,4 +1,5 @@
 //Move all the negative elements to one side of the array
+//No need to maintain order of elements
 package ds99.interview.allLevel;
 
 public class Arrays5 {

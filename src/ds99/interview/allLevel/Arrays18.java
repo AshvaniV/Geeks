@@ -17,16 +17,16 @@ public class Arrays18 {
     static int pair(int[] arr, int sum) {
         HashMap<Integer, Integer> map = new HashMap<>();
         int count = 0;
-        for (int i = 0; i < arr.length; i++) {
+        for (int value : arr) {
 
-            if (map.containsKey(sum - arr[i])) {
-                count += map.get(sum - arr[i]);
+            if (map.containsKey(sum - value)) {
+                count += map.get(sum - value);
             }
 
-            if (map.containsKey(arr[i])) {
-                map.put(arr[i], map.get(arr[i]) + 1);
+            if (map.containsKey(value)) {
+                map.put(value, map.get(value) + 1);
             } else {
-                map.put(arr[i], 1);
+                map.put(value, 1);
             }
 
         }

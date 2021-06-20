@@ -2,19 +2,22 @@ package ds99.interview.allLevel;
 
 public class Matrix8 {
 
-    static void rotate90Clockwise(int a[][], int N) {
+    static void rotateBy90UsingLayers(int[][] m, int n) {
+        int lastLayer = m.length - 1;
 
-        // Traverse each cycle
-        for (int i = 0; i < N / 2; i++) {
-            for (int j = i; j < N - i - 1; j++) {
+        for (int layer = 0; layer < m.length / 2; layer++) {
+            for (int j = layer; j < lastLayer - layer; j++) {
+                int leftTop = m[layer][j];
+                int rightTop = m[j][lastLayer - layer];
+                int leftBottom = m[lastLayer - j][layer];
+                int rightBottom = m[lastLayer - layer][lastLayer - j];
 
-                // Swap elements of each cycle
-                // in clockwise direction
-                int temp = a[i][j];
-                a[i][j] = a[N - 1 - j][i];
-                a[N - 1 - j][i] = a[N - 1 - i][N - 1 - j];
-                a[N - 1 - i][N - 1 - j] = a[j][N - 1 - i];
-                a[j][N - 1 - i] = temp;
+
+                //rotate
+                m[layer][j] = leftBottom;
+                m[j][lastLayer - layer] = leftTop;
+                m[lastLayer - j][layer] = rightBottom;
+                m[lastLayer - layer][lastLayer - j] = rightTop;
             }
         }
     }
@@ -28,15 +31,18 @@ public class Matrix8 {
         }
     }
 
-// Driver code
 
     public static void main(String[] args) {
-        int arr[][] = {{1, 2, 3, 4},
-                      {5, 6, 7, 8},
+        int[][] matrix = {
+                {1, 2, 3, 4},
+                {5, 6, 7, 8},
                 {9, 10, 11, 12},
-                {13, 14, 15, 16}};
-        rotate90Clockwise(arr,arr.length);
-        printMatrix(arr.length, arr);
+                {13, 14, 15, 16}
+        };
+        rotateBy90UsingLayers(matrix, matrix.length);
+        printMatrix(matrix.length, matrix);
     }
 }
+
+/**/
 

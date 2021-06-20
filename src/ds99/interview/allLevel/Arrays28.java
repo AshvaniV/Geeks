@@ -1,3 +1,9 @@
+/*Triplet Sum in Array
+Given an array arr of size n and an integer X. Find if there's a triplet in the array which sums up to the given integer X.
+Expected Time Complexity: O(n2)
+Expected Auxiliary Space: O(1)
+* */
+
 package ds99.interview.allLevel;
 
 import java.util.Arrays;
@@ -40,3 +46,11 @@ public class Arrays28 {
         System.out.println(output);
     }
 }
+/*Solution
+we can't use extra space here so no hashing concept. We have to solve it using given array only.
+
+If we have array sorted then we can check by adding array values from start and enc. We are having start next to our
+ith element and end is as last element of array so i should go till 3rd last element of array and by this time start
+will be at 2nd last element and end will be at last element of array.
+
+* */

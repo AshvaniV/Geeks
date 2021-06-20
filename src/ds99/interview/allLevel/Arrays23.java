@@ -32,10 +32,15 @@ public class Arrays23 {
 
 
 /*
-Logic: We have to find maximum product subarray so we have to take care of negative numbers as well.
-Whenever we have negative number at ith location we swap previous max and min [because while a negative
-number multiplied by a small number it becomes a big number so we have big number on max but now after swap
-max will hold a small number and min will hold a big number]
-We will find min between previous min and min*arr[i] and we find max between previous max and max* arr[i]
-at last we compare max with result and if max > result then update result.
+Logic: We have to find maximum product sub-array so we have to take care of negative numbers as well.
+there are 3 parameters, which are holding minimum, maximum and result values. initially we assigned first array value to
+all of them,
+there might be 3 scenarios, at ith location, we have positive number, negative number or 0.
+for positive no: calculate max and min using this.
+for negative no: we know that an we multiply our max with this it will become smaller compare to min so we swap min and
+max and then calculate max and min as usual.
+If anytime we got 0 in ith location, it will make both max and min as 0 so afterwards they will start from next to 0 which
+is correct in our case because whenever we have 0 in our array it will make whole product as 0 so there will be subarray
+before or after 0 with involving 0.
+
 */

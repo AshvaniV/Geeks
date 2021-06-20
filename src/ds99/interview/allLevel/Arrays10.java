@@ -1,4 +1,4 @@
-//Minimum no. of Jumps to reach end of an array
+//Minimum no. of Jumps to reach end of an array : DP
 package ds99.interview.allLevel;
 
 public class Arrays10 {
