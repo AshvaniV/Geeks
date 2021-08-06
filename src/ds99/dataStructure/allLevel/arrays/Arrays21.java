@@ -1,4 +1,4 @@
-//Subarray with 0 sum
+//Sub-array with 0 sum is present or not
 
 package ds99.dataStructure.allLevel.arrays;
 
@@ -31,5 +31,5 @@ Solution: there would 3 scenarios which will come for this logic
 1. we have 0 in array.
 2. we have sub array sum as 0.
 3. We are adding value to sum each time and then adding sum to Set, so if any time sum was found as presented
-in Set, this means there is subarray which summation is 0 that's why we have got the same sum again as presented in Set.
+in Set, this means there is sub-array which summation is 0 that's why we have got the same sum again as presented in Set.
 * */

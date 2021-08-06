@@ -1,4 +1,4 @@
-//Minimum swaps and K together
+// **Hard** Minimum swaps and K together
 /*Given an array of n positive integers and a number k. Find the minimum number of swaps required to bring all the numbers
  less than or equal to k together.*/
 

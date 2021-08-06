@@ -1,4 +1,4 @@
-//Maximum Product Subarray
+//Maximum Product Sub-array
 package ds99.dataStructure.allLevel.arrays;
 
 public class Arrays23 {
@@ -37,10 +37,10 @@ there are 3 parameters, which are holding minimum, maximum and result values. in
 all of them,
 there might be 3 scenarios, at ith location, we have positive number, negative number or 0.
 for positive no: calculate max and min using this.
-for negative no: we know that an we multiply our max with this it will become smaller compare to min so we swap min and
+for negative no: we know that if we multiply our max with this it will become smaller compare to min so we swap min and
 max and then calculate max and min as usual.
 If anytime we got 0 in ith location, it will make both max and min as 0 so afterwards they will start from next to 0 which
-is correct in our case because whenever we have 0 in our array it will make whole product as 0 so there will be subarray
+is correct in our case because whenever we have 0 in our array it will make whole product as 0 so there will be sub-array
 before or after 0 with involving 0.
 
 */

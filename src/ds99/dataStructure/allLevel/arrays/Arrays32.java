@@ -50,7 +50,7 @@ public class Arrays32 {
 }
 
 /*Solution
-We can't use extra space here with O[N] and also cam't traverse it using inner loop so we have to solve it using temp
+We can't use extra space here with O[N] and also can't traverse it using inner loop so we have to solve it using temp
 variable.
 We have defined 2 variables l and r which will maintain lower to a and higher to b values and will help in swapping
 so whenever we find any value smaller than a we swap ith value with lth value and increase l. As we started l with 0

@@ -41,6 +41,10 @@ public class Arrays30 {
 
 //solution
 /*
-Each time consider we check all students in array of chocolate packets and their minimum and maximum chocolate difference.
+We are not worried about how less chocolate a student gets, we are worried about the difference between min and chocolates
+that students will get. So once we sorted the array, we can take m students out of n chocolates that means from array
+we can check m students interval each time and find their max and min element different. Next time find another m student's
+min and max difference so at last we will have minimum difference of chocolates that m students are getting.
+
 time complexity : O[nlogn] from sorting
 * */

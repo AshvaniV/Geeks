@@ -1,4 +1,4 @@
-//Inversion of array
+// **Hard** Inversion of array
 /*
 Inversion Count: For an array, inversion count indicates how far (or close) the array is from being sorted. If array is
 already sorted then the inversion count is 0. If an array is sorted in the reverse order then the inversion count is the maximum.
@@ -101,11 +101,18 @@ Here we have added only one extra line in merge sort algorithm to get the invers
 As we know this algorithm works on divide -> sort -> merge rule, we are actually checking a condition where:
 ith value of left array l[] is more than jth value of right side array r[], in this case at any point of time,
 suppose we have below 2 arrays l[] = {10,11,12} amd r[] = {9,15} (they are sorted in themselves except compare with each other)
-if we see our logic for these array, condition l[i] > r[j] is true when l is on 10 and r is on 9 so we calculate count as
+if we see our logic for these array, condition Cis true when l is on 10 and r is on 9 so we calculate count as
 (nl - i), right now n[] has 3 values and i is on 0 so count is 3. let's explore it considering merged array as below
 {10,11,12,9,15} : inversion = [10,9], count = 1
 {10,11,12,9,15} : inversion = [11,9], count = 2
 {10,11,12,9,15} : inversion = [12,9], count = 3
 
 so we need 3 inversion to make it sorted.
+
+logic behind nl-i
+we know we are on ith location at any time and at this time both l[] and r[] are sorted in themselves. Now if anytime
+we have l[i] => r[j] which r array's current element is greater than l's current element. In this case we have to swap
+r's element one by one with all l's pending element that is [length of l - i] swaps so for all merge calls we will be
+incrementing this answer value
+
 */

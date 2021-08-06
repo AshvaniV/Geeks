@@ -1,4 +1,5 @@
-//Merge 2 sorted arrays without using Extra space
+//  **Hard/Medium** V.IMP
+/*Merge 2 sorted arrays without using Extra space
 /*Given two sorted arrays arr1[] of size N and arr2[] of size M. Each array is sorted in non-decreasing order.
 Merge the two arrays into one sorted array in non-decreasing order without using any extra space.
 Input:
@@ -32,6 +33,11 @@ public class Arrays12 {
                 lastIndexOfArr1--;
                 firstIndexOfArr2++;
             } else
+
+                /*This is the condition when arr1[lastIndexOfArr1] > arr2[firstIndexOfArr2], that means after this
+                 * situation, Arr1's all left to current elements would be smaller then right elements of arr2 so we are
+                 * breaking this loop here.
+                 * */
                 break;
 
         }
@@ -62,17 +68,16 @@ public class Arrays12 {
 
     public static void main(String[] args) {
         int[] arr1 = {2, 7};
-        int[] arr2 = {2, 2, 6, 6, 7, 7, 10, 11, 12, 14, 15, 16};
+        int[] arr2 = {1, 4, 6, 6, 7, 7, 10, 11, 12, 14, 15, 16};
         mergeWithoutExtraSpace(arr1, arr2);
 
     }
 }
 /*
-We knows both the arrays are sorted that means if we want to first sort them in such a way that n elements should go
-for arr1 and rest m elements should go for arr2, we have to run loop which should start last index of arr1 and
-first index of arr2. This loop will look for such elements in arr2 in start which are less than last elements in arr1
-if we find any then swap them. Now pointer from arr1 will go to previous index and pointer from arr2 will go for next
-index.
-We know that this loop is having && condition so it will run only till the minimum number of elements in any array.
-This is completely fine because We know both arrays were sorted since start so once we swap or make changes for number
-of elements of small array, the other once will have rest elements in right place.*/
+This solution is not exactly without using any extra space because we are using here temp variable
+Approach is simple, we know that both arrays are sorted in their own way, so our solution is make all elements of Array1
+smaller than Array2. Initially we don't care about how they are storing in both these arrays, we are taking care that
+at last while sorting these arrays individually and printing both these arrays.
+
+Collecting these arrays in a StringBuilder and  print SB is additional part and was not part of requirement.
+*/

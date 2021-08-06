@@ -1,11 +1,9 @@
-/*
+/* **Hard** Not done
 Next Permutation
 Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.
 If such an arrangement is not possible, it must rearrange it as the lowest possible order (i.e., sorted in ascending order).
 The replacement must be in place and use only constant extra memory.
-
-
-* */
+*/
 
 
 package ds99.dataStructure.allLevel.arrays;
@@ -54,7 +52,7 @@ public class Arrays15 {
     }
 
     public static void main(String[] args) {
-        int[] a = {1, 5, 8, 4, 7, 6, 5, 3, 1};
+        int[] a = {2,1,3};
         nextPermutation(a);
 
 
@@ -65,7 +63,24 @@ public class Arrays15 {
     }
 }
 /*
+Example:1 2 3
+        1 3 2
+        2 1 3
+        2 3 1
+        3 1 2
+        3 2 1
+
+
  * TC:: O(n)
  * SC:: O(1)
- *
+ Solution:
+
+ First find the right most index which's value is greater than it's left index's value.
+ If we don't find it : that means we are given last permutation in dictionary so just reverse given array and this is output.
+ If we find it : save that index value at inx
+
+
+
+
+
  * */

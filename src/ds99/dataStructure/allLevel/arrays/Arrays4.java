@@ -16,11 +16,11 @@ public class Arrays4 {
                 two++;
         }
 
-        for (int i = 0; i <= zero; i++) {
+        for (int i = 0; i < zero; i++) {
             arr[i] = 0;
         }
 
-        for (int j = zero; j <= zero + one; j++) {
+        for (int j = zero; j < zero + one; j++) {
             arr[j] = 1;
         }
 
@@ -28,6 +28,41 @@ public class Arrays4 {
             arr[k] = 2;
         }
         printArray(arr);
+    }
+
+
+    //Better approach
+    public static void sort012(int a[], int n) {
+        int low = 0;
+        int mid = 0;
+        int high = n - 1;
+
+        while (mid <= high) {
+            switch (a[mid]) {
+                case 0: {
+                    int temp = a[low];
+                    a[low] = a[mid];
+                    a[mid] = temp;
+                    low++;
+                    mid++;
+                    break;
+                }
+
+                case 1: {
+                    mid++;
+                    break;
+                }
+
+                case 2: {
+                    int temp = a[high];
+                    a[high] = a[mid];
+                    a[mid] = temp;
+                    high--;
+                    break;
+                }
+            }
+
+        }
     }
 
 
