@@ -12,19 +12,21 @@ public class Arrays19 {
         ArrayList<Integer> s = new ArrayList<>();
         int i = 0;
         int j = 0;
-        int z = 0;
-        while (i < n1 && j < n2 && z < n3) {
+        int k = 0;
+        while (i < n1 && j < n2 && k < n3) {
 
-            if (A[i] == B[j] && B[j] == C[z]) {
+            if (A[i] == B[j] && B[j] == C[k]) {
                 if (!s.contains(A[i]))
                     s.add(A[i]);
             }
             if (A[i] < B[j])
                 i++;
-            else if (B[j] < C[z])
+            else if (B[j] < C[k])
                 j++;
+            //above cases are A<B<C that means C is greater than A and B
+            //Below else case mean C is smaller than A and B so we can increase k
             else
-                z++;
+                k++;
         }
         return s;
     }

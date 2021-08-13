@@ -26,7 +26,7 @@ public class Arrays31 {
 }
 
 
-/*
+/* We are not going to change location of elements in arrays so we cant sort it.
 traverse given array and add a[i] to sum, so we will have sum either less than or greater than x.
 if it is less than x that means we are yet to get sub array so not to do anything and loop will reach to next element
 and it will be added to sum.

@@ -41,6 +41,6 @@ for negative no: we know that if we multiply our max with this it will become sm
 max and then calculate max and min as usual.
 If anytime we got 0 in ith location, it will make both max and min as 0 so afterwards they will start from next to 0 which
 is correct in our case because whenever we have 0 in our array it will make whole product as 0 so there will be sub-array
-before or after 0 with involving 0.
+before or after 0 without involving 0.
 
 */

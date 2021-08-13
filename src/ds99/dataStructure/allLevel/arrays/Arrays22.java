@@ -1,6 +1,4 @@
 //Factorials of large numbers
-
-
 package ds99.dataStructure.allLevel.arrays;
 
 import java.io.BufferedReader;

@@ -111,7 +111,7 @@ so we need 3 inversion to make it sorted.
 
 logic behind nl-i
 we know we are on ith location at any time and at this time both l[] and r[] are sorted in themselves. Now if anytime
-we have l[i] => r[j] which r array's current element is greater than l's current element. In this case we have to swap
+we have l[i] => r[j] which means r array's current element is greater than l's current element. In this case we have to swap
 r's element one by one with all l's pending element that is [length of l - i] swaps so for all merge calls we will be
 incrementing this answer value
 

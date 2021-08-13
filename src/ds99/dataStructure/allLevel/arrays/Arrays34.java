@@ -1,5 +1,5 @@
 //Palindromic Array
-/*Given a Integer array A[] of n elements. Your task is to complete the function PalinArray.
+/*Given a Integer array A[] of n elements.
 Which will return 1 if all the elements of the Array are palindrome otherwise it will return 0.*/
 package ds99.dataStructure.allLevel.arrays;
 

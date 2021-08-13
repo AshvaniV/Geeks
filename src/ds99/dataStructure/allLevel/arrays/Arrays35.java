@@ -1,10 +1,5 @@
 //Median of array
-//Array should be sorted
-//In case of odd no of elements, middle no is median
-//In case of even number of elements average of two middle elements is the median
-
 package ds99.dataStructure.allLevel.arrays;
-
 import java.util.Arrays;
 
 public class Arrays35 {
@@ -26,3 +21,7 @@ public class Arrays35 {
 
     }
 }
+
+/*Array should be sorted
+In case of odd no of elements, middle no is median
+In case of even number of elements average of two middle elements is the median*/

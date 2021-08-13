@@ -19,10 +19,12 @@ public class Arrays18 {
         int count = 0;
         for (int value : arr) {
 
+            //increase count
             if (map.containsKey(sum - value)) {
                 count += map.get(sum - value);
             }
 
+     //add to map [whether current number was involved to increase count or not.. In each case it ll be added to map]
             if (map.containsKey(value)) {
                 map.put(value, map.get(value) + 1);
             } else {

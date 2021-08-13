@@ -1,4 +1,5 @@
 /*Given an array of size n and a number k, find all elements that appear more than n/k times*/
+
 /*input arrays is {3, 1, 1, 2, 1, 2, 3, 3} and k is 4, then the output should be [1, 3].
 Note that size of array is 8 (or n = 8), so we need to find all elements that appear more than 2 (or 8/4) times.*/
 package ds99.dataStructure.allLevel.arrays;
