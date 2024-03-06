@@ -11,7 +11,7 @@ public class Fifth_VolatileSingleton {
         if (instance == null) {
             synchronized (Fifth_VolatileSingleton.class) {
                 if (instance == null) {
-                    System.out.println("Printed in volatile ");
+                    System.out.println("Printed in Fifth_VolatileSingleton ");
                     instance = new Fifth_VolatileSingleton();
                 }
             }
